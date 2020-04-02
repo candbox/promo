@@ -1,0 +1,83 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0">
+<title>zepto promo example</title>
+<style>
+.pure-g{letter-spacing: -.31em;
+*letter-spacing: normal;
+*word-spacing: -.43em;
+text-rendering: optimizespeed;
+font-family: Helvetica,Arial,sans-serif;
+display: -webkit-flex;
+-webkit-flex-flow: row wrap;
+display: -ms-flexbox;
+-ms-flex-flow: row wrap;
+-ms-align-content: flex-start;
+-webkit-align-content: flex-start;
+align-content: flex-start;
+}
+.pure-u-md-1-2 {width: 50%;*width: 49.969%;}
+
+.pure-u-md-1-2 {
+display: inline-block;
+*display: inline;
+zoom: 1;
+letter-spacing: normal;
+word-spacing: normal;
+vertical-align: top;
+text-rendering: auto;
+}
+.content {
+padding: 1em;
+}
+/*promo*/
+.promo{display: flex;flex-direction: column;position: relative;}
+.promo .tab{position:absolute;bottom:0.5em;right:0.5em;text-align:right;}
+.promo .tab em{width:20px;height:20px;border: 1px solid #ccc;border-radius:10px;display:inline-block;text-align: center;margin: 0px 5px;}
+.promo .tab .active{width:50px;background:#fb0;}
+.promo .box{padding:5px;border:1px solid #ccc;border-radius:5px;min-height: 70px;}
+.promo .box em{display:block;min-height:50px;}
+.promo .box em:not(:first-child){display:none;} /*here keep first unit is display*/
+</style>
+<script type="text/javascript" src="zepto-1.2.js"></script>
+</head>
+<body>
+<div class="pure-g">
+<div class="pure-u-1 pure-u-md-1-2">
+<div class="content">
+<div class="promo" id="unid-group-name-a">
+<div class="box">
+<em>Candbox shopping cart official site</em>
+<em>Welcome to back here waiting for a moment.</em>
+<em>great 2020 let shopping again.</em>
+</div>
+<div class="tab">
+<em class="active"></em><em></em><em></em>
+</div>
+</div>
+</div>
+</div>
+<div class="pure-u-1 pure-u-md-1-2">
+<div class="content">
+<div class="promo" id="unid-group-name-b">
+<div class="box">
+<em>Candbox shopping cart official site</em>
+<em>Welcome to back here waiting for a moment.</em>
+<em>great 2020 let shopping again.</em>
+</div>
+<div class="tab">
+<em class="active"></em><em></em><em></em>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript"> 
+//add display group and keep unique id name
+$('#unid-group-name-a').promo(2000,true);
+$('#unid-group-name-b').promo(1500,true);
+</script>
+</body>
+</html>
